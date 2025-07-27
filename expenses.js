@@ -11,7 +11,6 @@
 // - Practiced destructuring inside loops
 // - Used spread operator to clone and update arrays immutably
 
-
 let expenses = [
   { amount: 1200, category: "Food", description: "Groceries" },
   { amount: 300, category: "Transport", description: "Bus ticket" },

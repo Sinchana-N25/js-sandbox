@@ -1,0 +1,37 @@
+<!-- Day 5:
+ Focus: DOM Manipulation with JavaScript
+ Features:
+ - Render expenses dynamically into the DOM
+ - Filter expenses by category (via input)
+ - Sort expenses by amount (ascending/descending)
+ - Show total amount using a button 
+ - Show all expenses (no filtering)-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Expense Tracker</h1>
+
+    <div id="input-section">
+        <input type="text" id="categoryFilter" placeholder="Filter by Category" />
+        <button id="filterBtn">Filter</button>
+        <button id="sortAscBtn">Sort ↑</button>
+        <button id="sortDescBtn">Sort ↓</button>
+        <button id="totalBtn">Show Total</button>
+        <button id="showAllBtn">Show All</button>
+    </div>
+
+    <div id="expensesList"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

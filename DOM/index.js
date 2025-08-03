@@ -71,6 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
         timestampSpan.textContent = `${info.timestamp || ""}${
           info.edited ? " (edited)" : ""
         }`;
+
         li.appendChild(timestampSpan);
 
         const editBtn = document.createElement("button");
@@ -157,7 +158,15 @@ window.addEventListener("DOMContentLoaded", () => {
       isEditing: false,
     };
 
-    expenses.push(newExpense);
+    expenses.push({
+      amount,
+      category,
+      description,
+      timestamp: getCurrentFormattedTime(),
+      edited: false,
+      isEditing: false,
+    });
+
     showAll();
 
     document.getElementById("amount").value = "";

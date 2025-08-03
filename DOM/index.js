@@ -184,9 +184,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Event Listeners
   filterButton.addEventListener("click", () => {
-    const category = document.getElementById("categoryFilter").value.trim();
-    filtered = expenses.filter(
-      (x) => x.category.toLowerCase() === category.toLowerCase()
+    const category = document
+      .getElementById("filterCategory")
+      .value.trim()
+      .toLowerCase();
+    const filtered = expenses.filter((info) =>
+      info.category.toLowerCase().includes(category)
     );
     renderList(filtered);
   });

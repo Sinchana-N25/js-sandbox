@@ -140,23 +140,14 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function addExpense() {
-    let amount = Number(document.getElementById("amount").value);
-    let category = document.getElementById("category").value.trim();
-    let description = document.getElementById("description").value.trim();
+    const amount = document.getElementById("amount").value;
+    const category = document.getElementById("category").value;
+    const description = document.getElementById("description").value;
 
     if (!amount || !category || !description) {
-      alert("Please fill out all fields correctly.");
+      alert("Please fill all fields.");
       return;
     }
-
-    let newExpense = {
-      amount,
-      category,
-      description,
-      timestamp: getCurrentFormattedTime(),
-      edited: false,
-      isEditing: false,
-    };
 
     expenses.push({
       amount,
@@ -166,6 +157,14 @@ window.addEventListener("DOMContentLoaded", () => {
       edited: false,
       isEditing: false,
     });
+
+    renderList();
+    updateTotal();
+
+    // Clear inputs
+    document.getElementById("amount").value = "";
+    document.getElementById("category").value = "";
+    document.getElementById("description").value = "";
 
     showAll();
 

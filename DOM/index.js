@@ -112,19 +112,26 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function editExpense(index) {
-    expenses.forEach((item, i) => {
-      item.isEditing = i === index;
-    });
-    renderList(filtered.length > 0 ? filtered : expenses);
+    // Find the actual object in the master expenses list to modify
+    const expenseToEdit = filtered[index];
+    expenseToEdit.isEditing = true;
+
+    // Just re-render the list you're currently looking at
+    renderList(filtered);
   }
 
   function saveEdit(index, newAmount, newDesc) {
-    expenses[index].amount = Number(newAmount);
-    expenses[index].description = newDesc;
-    expenses[index].isEditing = false;
-    expenses[index].edited = true;
-    expenses[index].timestamp = getCurrentFormattedTime();
-    renderList(filtered.length > 0 ? filtered : expenses);
+    // Find the actual object to modify
+    const expenseToSave = filtered[index];
+
+    expenseToSave.amount = Number(newAmount);
+    expenseToSave.description = newDesc;
+    expenseToSave.isEditing = false;
+    expenseToSave.edited = true;
+    expenseToSave.timestamp = getCurrentFormattedTime();
+
+    // Re-render the current list
+    renderList(filtered);
   }
 
   function getCurrentFormattedTime() {
@@ -183,23 +190,31 @@ window.addEventListener("DOMContentLoaded", () => {
   let addExpenseButton = document.getElementById("addBtn");
 
   // Event Listeners
+  // --- Event Listeners ---
+
   filterButton.addEventListener("click", () => {
     const category = document
       .getElementById("filterCategory")
       .value.trim()
       .toLowerCase();
-    const filtered = expenses.filter((info) =>
+
+    // FIX: Update the global 'filtered' array
+    filtered = expenses.filter((info) =>
       info.category.toLowerCase().includes(category)
     );
     renderList(filtered);
   });
 
   sortAscButton.addEventListener("click", () => {
-    renderList([...filtered].sort((a, b) => a.amount - b.amount));
+    // FIX: Sort the 'filtered' array in place and re-render
+    filtered.sort((a, b) => a.amount - b.amount);
+    renderList(filtered);
   });
 
   sortDescButton.addEventListener("click", () => {
-    renderList([...filtered].sort((a, b) => b.amount - a.amount));
+    // FIX: Sort the 'filtered' array in place and re-render
+    filtered.sort((a, b) => b.amount - a.amount);
+    renderList(filtered);
   });
 
   totalButton.addEventListener("click", showTotal);

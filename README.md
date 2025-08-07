@@ -1,9 +1,14 @@
-JavaScript Practice – Expense Tracker Learning Repo
+# 🧪 js-sandbox
 
-This repo documents my journey learning JavaScript fundamentals while building toward a full-stack Expense Tracker app. I'm following a deep, slow-paced learning path focused on mastering concepts thoroughly before moving to backend and frontend development.
+This repository is my personal JavaScript playground — a place for experimenting, building, and learning through small projects, coding challenges, and syntax practice.
 
-This is not a tutorial project—this is a **learning sandbox**. Every file here represents an intentional step in understanding how real web app logic is built from scratch.
+It includes:
+- Snippets and functions across core JavaScript concepts
+- DOM manipulation practice
+- ES6+ features
 
-Tools & References
+📚 **Primary learning resources**: 
+- [Codédex's JavaScript Path](https://www.codedex.io/)
 - [MDN JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+This repo evolves as I explore new ideas or revisit old ones with improved understanding. It serves both as a revision base and a testing ground.

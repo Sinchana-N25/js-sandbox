@@ -1,4 +1,4 @@
-// Day 3 - Reading List Tracker using ES6 Features
+// Reading List Tracker using ES6 Features
 // Practiced and revised ES6 concepts: arrow functions, template literals, for...of loops, spread/rest operators, and object/array handling.
 
 // Define an object to represent the user's Goodreads-style reading list.

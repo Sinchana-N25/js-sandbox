@@ -1,4 +1,4 @@
-// Expense Tracker Practice - Day 3
+// Expense Tracker Practice - 3
 // 📅 Focus: Sorting, Filtering by Date, Monthly Aggregation
 // Tasks Completed:
 // - Sorted by amount (asc/desc), category (alphabetical), and date (oldest → newest)

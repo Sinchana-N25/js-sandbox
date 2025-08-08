@@ -1,6 +1,5 @@
-//Day 4
-// Focus: Async/Await and Promises
-// Tasks Completed:
+// Async/Await and Promises
+// Tasks:
 // - Created a basic promise and consumed it with .then() and .catch()
 // - Used async/await to fetch data from an external API (dummyjson.com)
 // - Handled fetch errors with try-catch and simulated loading delay

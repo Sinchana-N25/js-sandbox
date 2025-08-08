@@ -1,10 +1,10 @@
-//Day 1:
+// Expense Tracker Practice - 1:
 // - Learned JS object & array basics
 // - Created a mock array of expense objects (amount, category, description)
 // - Explored data access using dot/bracket notation
 // - Reinforced concepts like loops, indexing, length, typeof
 
-// Day 2:
+// Expense Tracker Practice - 2:
 // - Practiced array methods: map, filter, reduce
 // - Used reduce to get total expenses
 // - Used filter+reduce combo to get category-wise totals

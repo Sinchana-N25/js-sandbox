@@ -1,0 +1,160 @@
+/* --- General Body & Background --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* A subtle, cool gradient from a very light blue to a soft off-white */
+  background: linear-gradient(135deg, #e0f7fa 0%, #f5f5f5 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligned to top for better scrolling */
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+}
+
+/* --- Main Content Container --- */
+.container {
+  width: 100%;
+  max-width: 600px; /* Increased max-width slightly for the new layout */
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Space between sections */
+}
+
+/* --- Section Cards (New) --- */
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #5e35b1; /* Darker purple for main heading */
+  margin-bottom: 0;
+}
+
+h2 {
+  color: #7e57c2;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+/* --- Form Elements --- */
+#add-expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #9575cd;
+  box-shadow: 0 0 0 3px rgba(149, 117, 205, 0.2); /* Focus ring */
+}
+
+/* --- Control Section (New Grid Layout) --- */
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack on mobile */
+  gap: 20px;
+}
+
+.control-group {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 10px;
+}
+
+/* Make filter input take available space */
+.control-group input[type="text"] {
+  flex-grow: 1;
+}
+
+/* --- Buttons --- */
+button {
+  background-color: #9575cd; /* A pleasant light purple */
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+button:hover {
+  background-color: #7e57c2; /* A slightly darker purple for hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+#addExpenseBtn {
+  background-color: #673ab7; /* A stronger purple for the primary action */
+  margin-top: 10px;
+}
+
+#addExpenseBtn:hover {
+  background-color: #5e35b1;
+}
+
+/* --- Expenses List --- */
+#expensesList {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expense-item {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #4dd0e1; /* Sea blue accent border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 620px) {
+  /* On wider screens, put control groups side-by-side */
+  .controls-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
